@@ -1,0 +1,11 @@
+Options -Indexes
+
+<FilesMatch "^(config\.php|setup\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^uploads/ - [F]
+</IfModule>
